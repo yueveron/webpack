@@ -3,10 +3,13 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 {{/if_eq}}
 import Vue from 'vue'
+import VueAxiosPlugin from 'vue-axios-plugin'
 import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
+
+Vue.use(VueAxiosPlugin)
 
 Vue.config.productionTip = false
 
